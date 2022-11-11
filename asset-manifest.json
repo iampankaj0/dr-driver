@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/dr-driver/static/css/main.ad748a9b.css",
+    "main.js": "/dr-driver/static/js/main.39a0c631.js",
+    "static/media/logo.png": "/dr-driver/static/media/logo.c174250258859ebb191f.png",
+    "index.html": "/dr-driver/index.html",
+    "main.ad748a9b.css.map": "/dr-driver/static/css/main.ad748a9b.css.map",
+    "main.39a0c631.js.map": "/dr-driver/static/js/main.39a0c631.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad748a9b.css",
+    "static/js/main.39a0c631.js"
+  ]
+}
