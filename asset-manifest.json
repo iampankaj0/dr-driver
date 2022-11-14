@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/dr-driver/static/css/main.ea7b789e.css",
-    "main.js": "/dr-driver/static/js/main.bfaaa087.js",
+    "main.js": "/dr-driver/static/js/main.aa9d7b44.js",
     "static/media/logo.png": "/dr-driver/static/media/logo.c174250258859ebb191f.png",
     "index.html": "/dr-driver/index.html",
     "main.ea7b789e.css.map": "/dr-driver/static/css/main.ea7b789e.css.map",
-    "main.bfaaa087.js.map": "/dr-driver/static/js/main.bfaaa087.js.map"
+    "main.aa9d7b44.js.map": "/dr-driver/static/js/main.aa9d7b44.js.map"
   },
   "entrypoints": [
     "static/css/main.ea7b789e.css",
-    "static/js/main.bfaaa087.js"
+    "static/js/main.aa9d7b44.js"
   ]
 }
