@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dr-driver/static/css/main.db6cc620.css",
-    "main.js": "/dr-driver/static/js/main.bade0f8c.js",
+    "main.css": "/dr-driver/static/css/main.5a16cb5b.css",
+    "main.js": "/dr-driver/static/js/main.b7fc27b6.js",
     "static/media/refer-and-earn.png": "/dr-driver/static/media/refer-and-earn.ba29ef33b2d9962934d1.png",
     "static/media/logo.png": "/dr-driver/static/media/logo.c174250258859ebb191f.png",
     "static/media/rt_icon.png": "/dr-driver/static/media/rt_icon.2715750f8fc3a9697bae.png",
     "index.html": "/dr-driver/index.html",
-    "main.db6cc620.css.map": "/dr-driver/static/css/main.db6cc620.css.map",
-    "main.bade0f8c.js.map": "/dr-driver/static/js/main.bade0f8c.js.map"
+    "main.5a16cb5b.css.map": "/dr-driver/static/css/main.5a16cb5b.css.map",
+    "main.b7fc27b6.js.map": "/dr-driver/static/js/main.b7fc27b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.db6cc620.css",
-    "static/js/main.bade0f8c.js"
+    "static/css/main.5a16cb5b.css",
+    "static/js/main.b7fc27b6.js"
   ]
 }
