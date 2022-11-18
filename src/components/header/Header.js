@@ -48,7 +48,7 @@ const Header = () => {
     > .links-section {
       position: absolute;
       bottom: 0;
-      left: -100%;
+      right: -1000%;
       height: calc(100% - 70px);
       background: var(--green-bg);
       border-bottom-left-radius: 15px;
@@ -58,8 +58,8 @@ const Header = () => {
       z-index: var(--z-fixed);
 
       @media screen and (max-width: 575px) {
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
         border-bottom-right-radius: 15px;
       }
 
@@ -186,7 +186,7 @@ const Header = () => {
     }
 
     .link__section-active {
-      left: 0 !important;
+      right: 0 !important;
       transition: 0.3s;
     }
   `;
@@ -242,13 +242,13 @@ const Header = () => {
             {forActive === 1 && (
               <ul className="all__links">
                 <li className="nav__link">
-                  <Link to="/dr-driver">
+                  <Link to="/make-enquiry">
                     Make an Enquiry
                     <FiChevronsRight />
                   </Link>
                 </li>
                 <li className="nav__link">
-                  <Link to="/dr-driver">
+                  <Link to="/my_rides">
                     My Rides
                     <FiChevronsRight />
                   </Link>
@@ -266,13 +266,13 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav__link">
-                  <Link to="/dr-driver">
+                  <Link to="/agent-login">
                     Agent Panel
                     <FiChevronsRight />
                   </Link>
                 </li>
                 <li className="nav__link">
-                  <Link to="/dr-driver">
+                  <Link to="/about-us">
                     About Us
                     <FiChevronsRight />
                   </Link>
@@ -285,13 +285,13 @@ const Header = () => {
             {forActive === 2 && (
               <ul className="all__links">
                 <li className="nav__link">
-                  <Link to="/dr-driver">
+                  <Link to="/driver-login">
                     Trusted Driver
                     <FiChevronsRight />
                   </Link>
                 </li>
                 <li className="nav__link">
-                  <Link to="/dr-driver">
+                  <Link to="/agent-login">
                     Agent Panel
                     <FiChevronsRight />
                   </Link>
@@ -309,7 +309,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav__link">
-                  <Link to="/dr-driver">
+                  <Link to="/apply-driver-job">
                     Apply for Driver Job
                     <FiChevronsRight />
                   </Link>
