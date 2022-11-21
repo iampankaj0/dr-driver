@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/dr-driver/static/css/main.b9b44496.css",
+    "main.css": "/dr-driver/static/css/main.3a495e08.css",
     "main.js": "/dr-driver/static/js/main.944dfaa3.js",
     "static/media/refer-and-earn.png": "/dr-driver/static/media/refer-and-earn.ba29ef33b2d9962934d1.png",
     "static/media/logo.png": "/dr-driver/static/media/logo.c174250258859ebb191f.png",
     "static/media/my_current_rides.jpg": "/dr-driver/static/media/my_current_rides.8a3ff44e2f4e4510625b.jpg",
     "static/media/rt_icon.png": "/dr-driver/static/media/rt_icon.2715750f8fc3a9697bae.png",
     "index.html": "/dr-driver/index.html",
-    "main.b9b44496.css.map": "/dr-driver/static/css/main.b9b44496.css.map",
+    "main.3a495e08.css.map": "/dr-driver/static/css/main.3a495e08.css.map",
     "main.944dfaa3.js.map": "/dr-driver/static/js/main.944dfaa3.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9b44496.css",
+    "static/css/main.3a495e08.css",
     "static/js/main.944dfaa3.js"
   ]
 }
