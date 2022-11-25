@@ -211,187 +211,189 @@ const Header = () => {
         <div className="menu__icon">
           <HiMenuAlt3 onClick={() => setOpenNavToggle(!openNavToggle)} />
         </div>
-        <div
-          className={
-            openNavToggle
-              ? "links-section link__section-active"
-              : "links-section"
-          }
-        >
-          <GrClose
-            className="close__nav-btn"
-            onClick={() => setOpenNavToggle(!openNavToggle)}
-          />
+        {openNavToggle && (
+          <div
+            className={
+              openNavToggle
+                ? "links-section link__section-active"
+                : "links-section"
+            }
+          >
+            <GrClose
+              className="close__nav-btn"
+              onClick={() => setOpenNavToggle(!openNavToggle)}
+            />
 
-          <>
-            <div className="choose__type">
-              <div
-                className={forActive === 1 && "choose__name-active"}
-                onClick={() => setForActive(1)}
-              >
-                <span className="active__type">For Customer</span>
+            <>
+              <div className="choose__type">
+                <div
+                  className={forActive === 1 && "choose__name-active"}
+                  onClick={() => setForActive(1)}
+                >
+                  <span className="active__type">For Customer</span>
+                </div>
+                <div
+                  className={forActive === 2 && "choose__name-active"}
+                  onClick={() => setForActive(2)}
+                >
+                  <span className="active__type">For Driver</span>
+                </div>
               </div>
-              <div
-                className={forActive === 2 && "choose__name-active"}
-                onClick={() => setForActive(2)}
-              >
-                <span className="active__type">For Driver</span>
-              </div>
-            </div>
-            {/* ====== FOR CUSTOMER START ===== */}
-            {forActive === 1 && (
-              <ul className="all__links">
-                <li className="nav__link">
-                  <Link to="/make-enquiry">
-                    Make an Enquiry
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                <li className="nav__link">
-                  <Link to="/my_rides">
-                    My Rides
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                <li className="nav__link">
-                  <Link to="/dr-driver">
-                    My Subscription
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                <li className="nav__link">
-                  <Link to="/dr-driver">
-                    My Feedback
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                <li className="nav__link">
-                  <Link to="/agent-login">
-                    Agent Panel
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                <li className="nav__link">
-                  <Link to="/about-us">
-                    About Us
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-              </ul>
-            )}
-            {/* ====== FOR CUSTOMER ENDS ===== */}
-
-            {/* ====== FOR DRIVER START ===== */}
-            {forActive === 2 && (
-              <ul className="all__links">
-                <li className="nav__link">
-                  <Link to="/driver-login">
-                    Trusted Driver
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                <li className="nav__link">
-                  <Link to="/agent-login">
-                    Agent Panel
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                <li className="nav__link">
-                  <Link to="/dr-driver">
-                    Clear My Due
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                <li className="nav__link">
-                  <Link to="/dr-driver">
-                    My Bonus Status
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                <li className="nav__link">
-                  <Link to="/apply-driver-job">
-                    Apply for Driver Job
-                    <FiChevronsRight />
-                  </Link>
-                </li>
-                {moreActive !== 3 ? (
-                  <li className="nav__link see__more-link">
-                    <Link onClick={() => setMoreActive(3)}>
-                      More
+              {/* ====== FOR CUSTOMER START ===== */}
+              {forActive === 1 && (
+                <ul className="all__links">
+                  <li className="nav__link">
+                    <Link to="/make-enquiry">
+                      Make an Enquiry
                       <FiChevronsRight />
                     </Link>
                   </li>
-                ) : (
-                  <li
-                    style={{
-                      color: "var(--container-color)",
-                      textAlign: "center",
-                    }}
-                  >
-                    More Useful Links
+                  <li className="nav__link">
+                    <Link to="/my_rides">
+                      My Rides
+                      <FiChevronsRight />
+                    </Link>
                   </li>
-                )}
+                  <li className="nav__link">
+                    <Link to="/dr-driver">
+                      My Subscription
+                      <FiChevronsRight />
+                    </Link>
+                  </li>
+                  <li className="nav__link">
+                    <Link to="/dr-driver">
+                      My Feedback
+                      <FiChevronsRight />
+                    </Link>
+                  </li>
+                  <li className="nav__link">
+                    <Link to="/agent-login">
+                      Agent Panel
+                      <FiChevronsRight />
+                    </Link>
+                  </li>
+                  <li className="nav__link">
+                    <Link to="/about-us">
+                      About Us
+                      <FiChevronsRight />
+                    </Link>
+                  </li>
+                </ul>
+              )}
+              {/* ====== FOR CUSTOMER ENDS ===== */}
 
-                {/* ====== FOR MORE => START ===== */}
-                {moreActive === 3 && (
-                  <ul className="all__links">
-                    {/* <span onClick={() => setForActive(2)}>
+              {/* ====== FOR DRIVER START ===== */}
+              {forActive === 2 && (
+                <ul className="all__links">
+                  <li className="nav__link">
+                    <Link to="/driver-login">
+                      Trusted Driver
+                      <FiChevronsRight />
+                    </Link>
+                  </li>
+                  <li className="nav__link">
+                    <Link to="/agent-login">
+                      Agent Panel
+                      <FiChevronsRight />
+                    </Link>
+                  </li>
+                  <li className="nav__link">
+                    <Link to="/dr-driver">
+                      Clear My Due
+                      <FiChevronsRight />
+                    </Link>
+                  </li>
+                  <li className="nav__link">
+                    <Link to="/dr-driver">
+                      My Bonus Status
+                      <FiChevronsRight />
+                    </Link>
+                  </li>
+                  <li className="nav__link">
+                    <Link to="/apply-driver-job">
+                      Apply for Driver Job
+                      <FiChevronsRight />
+                    </Link>
+                  </li>
+                  {moreActive !== 3 ? (
+                    <li className="nav__link see__more-link">
+                      <Link onClick={() => setMoreActive(3)}>
+                        More
+                        <FiChevronsRight />
+                      </Link>
+                    </li>
+                  ) : (
+                    <li
+                      style={{
+                        color: "var(--container-color)",
+                        textAlign: "center",
+                      }}
+                    >
+                      More Useful Links
+                    </li>
+                  )}
+
+                  {/* ====== FOR MORE => START ===== */}
+                  {moreActive === 3 && (
+                    <ul className="all__links">
+                      {/* <span onClick={() => setForActive(2)}>
                       <FiChevronsLeft className="back__icon-btn" />
                       Back
                     </span> */}
-                    <li className="nav__link">
-                      <Link to="/dr-driver">
-                        Duty Report
-                        <FiChevronsRight />
-                      </Link>
-                    </li>
-                    <li className="nav__link">
-                      <Link to="/dr-driver">
-                        My Overtime Status
-                        <FiChevronsRight />
-                      </Link>
-                    </li>
-                    <li className="nav__link">
-                      <Link to="/dr-driver">
-                        Gift to Customers
-                        <FiChevronsRight />
-                      </Link>
-                    </li>
-                    <li className="nav__link">
-                      <Link to="/dr-driver">
-                        Complete My Verification
-                        <FiChevronsRight />
-                      </Link>
-                    </li>
-                    <li className="nav__link">
-                      <Link to="/dr-driver">
-                        Hiring Trainer Panel
-                        <FiChevronsRight />
-                      </Link>
-                    </li>
-                    <li className="nav__link">
-                      <Link to="/dr-driver">
-                        Onboarding Trainer
-                        <FiChevronsRight />
-                      </Link>
-                    </li>
-                    {moreActive === 3 && (
-                      <li className="nav__link see__less-link">
-                        <Link onClick={() => setMoreActive(0)}>
-                          See Less
-                          <FiChevronsRight stroke="#fff" />
+                      <li className="nav__link">
+                        <Link to="/dr-driver">
+                          Duty Report
+                          <FiChevronsRight />
                         </Link>
                       </li>
-                    )}
-                  </ul>
-                )}
+                      <li className="nav__link">
+                        <Link to="/dr-driver">
+                          My Overtime Status
+                          <FiChevronsRight />
+                        </Link>
+                      </li>
+                      <li className="nav__link">
+                        <Link to="/dr-driver">
+                          Gift to Customers
+                          <FiChevronsRight />
+                        </Link>
+                      </li>
+                      <li className="nav__link">
+                        <Link to="/dr-driver">
+                          Complete My Verification
+                          <FiChevronsRight />
+                        </Link>
+                      </li>
+                      <li className="nav__link">
+                        <Link to="/dr-driver">
+                          Hiring Trainer Panel
+                          <FiChevronsRight />
+                        </Link>
+                      </li>
+                      <li className="nav__link">
+                        <Link to="/dr-driver">
+                          Onboarding Trainer
+                          <FiChevronsRight />
+                        </Link>
+                      </li>
+                      {moreActive === 3 && (
+                        <li className="nav__link see__less-link">
+                          <Link onClick={() => setMoreActive(0)}>
+                            See Less
+                            <FiChevronsRight stroke="#fff" />
+                          </Link>
+                        </li>
+                      )}
+                    </ul>
+                  )}
 
-                {/* ====== FOR MORE => ENDS ===== */}
-              </ul>
-            )}
-            {/* ====== FOR DRIVER ENDS ===== */}
-          </>
-        </div>
+                  {/* ====== FOR MORE => ENDS ===== */}
+                </ul>
+              )}
+              {/* ====== FOR DRIVER ENDS ===== */}
+            </>
+          </div>
+        )}
       </Container>
     </HeaderSection>
   );
