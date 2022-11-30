@@ -13,6 +13,7 @@ import AgentLogin from "./components/agent-login/AgentLogin";
 import AboutUs from "./components/about-us/AboutUs";
 import DriverLogin from "./components/driver-login/DriverLogin";
 import ApplyDriverJob from "./components/apply-driver-job/ApplyDriverJob";
+import RatingReviews from "./components/rating-reviews/RatingReviews";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route exact path="/driver-login" element={<DriverLogin />} />
         <Route exact path="/about-us" element={<AboutUs />} />
         <Route exact path="/apply-driver-job" element={<ApplyDriverJob />} />
+        <Route exact path="/ratings-and-review" element={<RatingReviews />} />
 
         <Route path="*" element={<Home />} />
       </Routes>

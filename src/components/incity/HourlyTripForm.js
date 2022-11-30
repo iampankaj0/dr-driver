@@ -375,8 +375,8 @@ const HourlyTripForm = () => {
                 <option value="2">5-10 Kms</option>
                 <option value="3">10-20 Kms</option>
                 <option value="4">20-35 Kms</option>
-                <option value="6">35-50 Kms</option>
-                <option value="8">50-100 Kms</option>
+                <option value="5">35-50 Kms</option>
+                <option value="6">50-100 Kms</option>
               </select>
             </div>
           </div>

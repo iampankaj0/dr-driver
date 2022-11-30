@@ -167,7 +167,7 @@ const Footer = () => {
     justify-content: center;
     margin-top: 40px;
 
-    > .job__apply__btn {
+    .job__apply__btn {
       display: block;
       margin: 15px auto 15px;
       color: var(--blue-color);
@@ -252,7 +252,9 @@ const Footer = () => {
         </div>
       </Footer>
       <DriverJob>
-        <button className="job__apply__btn">Apply For Driver Job</button>
+        <Link to="/apply-driver-job">
+          <button className="job__apply__btn">Apply For Driver Job</button>
+        </Link>
       </DriverJob>
     </>
   );

@@ -201,6 +201,17 @@ img {
 
 /* --Webkit-Scrollbar CSS Ends */
 
+/* remove number symbol from input */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* for firefox */
+input[type="number"] {
+  -webkit-appearance: textfield;
+}
 
 
 /* Transform animations */

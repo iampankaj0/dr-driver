@@ -16,6 +16,7 @@ import dummyUser from "../../assets/user_dummy.png";
 import referImg from "../../assets/refer-and-earn.png";
 import { FiChevronsRight } from "react-icons/fi";
 import Footer from "../footer/Footer";
+import SubscribeModal from "./SubscribeModal";
 
 const Home = () => {
   const SubSection = styled.div`
@@ -430,6 +431,8 @@ const Home = () => {
 
   const [openFacilityId, setOpenFacilityId] = useState(0);
 
+  const [openSubscribeModal, setOpenSubscribeModal] = useState(false);
+
   return (
     <Section>
       <MetaTitle title="Dr. Driver - Home" />
@@ -640,7 +643,7 @@ const Home = () => {
                 </div>
 
                 <div className="see__more__review">
-                  <Link to="/dr-driver">
+                  <Link to="/ratings-and-review">
                     See more review <FiChevronsRight />
                   </Link>
                 </div>
@@ -654,7 +657,17 @@ const Home = () => {
                 <div className="subscibe__heading">Keep it Simple</div>
                 <h2>Subscribe & Save</h2>
                 <p>Same Driver With Flexible Schedule</p>
-                <button className="subcribe__btn">Subscribe Now</button>
+                <button
+                  className="subcribe__btn"
+                  onClick={() => setOpenSubscribeModal(true)}
+                >
+                  Subscribe Now
+                </button>
+                {openSubscribeModal && (
+                  <SubscribeModal
+                    setOpenSubscribeModal={setOpenSubscribeModal}
+                  />
+                )}
               </div>
             </SubscribeSave>
             {/* Subscribe & Save Section Ends */}
