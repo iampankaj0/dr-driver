@@ -1,0 +1,447 @@
+/* =========== GOOGLE FONTS =========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* ====== VERIABLES CSS ====== */
+:root {
+  --header-height: 3rem;
+
+  /* ====== COLORS ===== */
+  /* ====== Color mode HSL(hue, saturation, lightness) ===== */
+  --hue: 0;
+  --sat: 0%;
+  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --body-color: hsl(var(--hue), var(--sat), 98%);
+  --container-color: #fff;
+  --green-color: rgb(117, 119, 59);
+  --blue-color: rgb(3 48 106);
+
+  /* ====== Font and typography ===== */
+  --body-font: "Poppins", sans-serif;
+
+  --big-font-size: 3.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+
+  /* =========== BACKGROUND COLOR ========= */
+  --green-bg: linear-gradient(to right bottom,
+      rgb(175, 179, 102) 0%,
+      rgb(117, 119, 59) 100%) 100% center no-repeat;
+
+  --blue-bg: linear-gradient(to right bottom,
+      rgb(40 185 222) 0%,
+      rgb(3 48 106) 100%) 100% center no-repeat;
+
+  /* ====== Font Weight ===== */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* ====== Margins Bottom ====== */
+  /* .5rem = 8px | 1rem = 16px */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* ====== Z Index ====== */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+
+/* Responsive typography */
+@media screen and (max-width: 992) {
+  :root {
+    --big-font-size: 2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+    /* --tiny-font-size: 0.625rem; */
+  }
+}
+
+
+/* ============== BASE ============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--green-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ============== Reusable Css Class ============== */
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+
+
+/* ============== BUTTONS ============== */
+.button {
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--title-color-dark);
+}
+
+.button__icon {
+  margin-left: var(--mb-0-5);
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+
+/* --Webkit-Scrollbar CSS Start */
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #474732;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* --Webkit-Scrollbar CSS Ends */
+
+/* remove number symbol from input */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* for firefox */
+input[type="number"] {
+  -webkit-appearance: textfield;
+}
+
+
+/* Transform animations */
+@keyframes rightLeftStars {
+  10% {
+    transform: rotate(12deg)
+  }
+
+  20% {
+    transform: rotate(-12deg)
+  }
+
+  30% {
+    transform: rotate(12deg)
+  }
+
+  40% {
+    transform: rotate(-12deg)
+  }
+
+  50% {
+    transform: rotate(12deg)
+  }
+
+  60% {
+    transform: rotate(-12deg)
+  }
+
+  70% {
+    transform: rotate(12deg)
+  }
+
+  80% {
+    transform: rotate(-12deg)
+  }
+
+  90% {
+    transform: rotate(12deg)
+  }
+
+  100% {
+    transform: rotate(-12deg)
+  }
+}
+
+@-webkit-keyframes rightLeftStars {
+  10% {
+    transform: rotate(12deg)
+  }
+
+  20% {
+    transform: rotate(-12deg)
+  }
+
+  30% {
+    transform: rotate(12deg)
+  }
+
+  40% {
+    transform: rotate(-12deg)
+  }
+
+  50% {
+    transform: rotate(12deg)
+  }
+
+  60% {
+    transform: rotate(-12deg)
+  }
+
+  70% {
+    transform: rotate(12deg)
+  }
+
+  80% {
+    transform: rotate(-12deg)
+  }
+
+  90% {
+    transform: rotate(12deg)
+  }
+
+  100% {
+    transform: rotate(-12deg)
+  }
+}
+
+@keyframes activeSvgSize {
+  10% {
+    font-size: 41px
+  }
+
+  20% {
+    font-size: 42px
+  }
+
+  30% {
+    font-size: 43px
+  }
+
+  40% {
+    font-size: 44px
+  }
+
+  50% {
+    font-size: 45px
+  }
+
+  60% {
+    font-size: 44px
+  }
+
+  70% {
+    font-size: 43px
+  }
+
+  80% {
+    font-size: 42px
+  }
+
+  90% {
+    font-size: 41px
+  }
+}
+
+@-webkit-keyframes activeSvgSize {
+  10% {
+    font-size: 41px
+  }
+
+  20% {
+    font-size: 42px
+  }
+
+  30% {
+    font-size: 43px
+  }
+
+  40% {
+    font-size: 44px
+  }
+
+  50% {
+    font-size: 45px
+  }
+
+  60% {
+    font-size: 44px
+  }
+
+  70% {
+    font-size: 43px
+  }
+
+  80% {
+    font-size: 42px
+  }
+
+  90% {
+    font-size: 41px
+  }
+}
+
+
+/* ============== BREAKPOINTS ============== */
+/* for large device */
+@media screen and (max-width: 992px) {}
+
+/* for medium device */
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 576px) {}
+
+/* for small device */
+@media screen and (max-width: 350px) {}
+
+
+
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+
+
+
+/* Our facility Css Start */
+.testimonial__container {
+  width: 750px;
+}
+
+.testimonial__card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0.5rem;
+  border-radius: 1.5rem;
+  margin-bottom: var(--mb-3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.testimonial__card:hover {
+  background: var(--body-color);
+  color: var(--title-color-dark);
+}
+
+/* // Swiper class */
+.swiper-pagination-bullet {
+  background-color: var(--text-color) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--title-color) !important;
+}
+
+
+/* ============== BREAKPOINTS ============== */
+/* for large device */
+@media screen and (max-width: 992px) {
+  .testimonial__container {
+    width: initial;
+  }
+
+  .testimonial__card {
+    padding: 1.25rem 0.5rem;
+  }
+}
+
+/* Our facility Css Ends */
