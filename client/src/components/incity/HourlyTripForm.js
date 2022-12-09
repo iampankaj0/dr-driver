@@ -241,14 +241,14 @@ const HourlyTripForm = () => {
     <TripFormContainer>
       <div className="trip__type">
         <div
-          className={`${activeRound === 0 && "active__trip"}`}
+          className={`${activeRound === 0 ? "active__trip" : ""}`}
           onClick={() => setActiveRound(0)}
         >
           <h3>Round Trip</h3>
           <WifiTetheringErrorIcon />
         </div>
         <div
-          className={`${activeRound === 1 && "active__trip"}`}
+          className={`${activeRound === 1 ? "active__trip" : ""}`}
           onClick={() => setActiveRound(1)}
         >
           <h3>One Way Drop</h3>
@@ -284,7 +284,7 @@ const HourlyTripForm = () => {
           </div>
           <div className="price__section">
             <div>
-              <RupeeSymbol /> {hourIntoMoney == 1 && 424}{" "}
+              <RupeeSymbol /> {hourIntoMoney === 1 && 424}{" "}
               {hourIntoMoney > 1 && 250 * hourIntoMoney}
             </div>
             <div>
@@ -292,7 +292,7 @@ const HourlyTripForm = () => {
             </div>
             <div
               className={`price_details_content ${
-                pricingDetail && "price_details_content-active"
+                pricingDetail ? "price_details_content-active" : ""
               }`}
             >
               <div>
@@ -389,7 +389,7 @@ const HourlyTripForm = () => {
             </div>
             <div
               className={`price_details_content ${
-                pricingDetail && "price_details_content-active"
+                pricingDetail ? "price_details_content-active" : ""
               }`}
             >
               <div>

@@ -227,13 +227,13 @@ const Header = () => {
             <>
               <div className="choose__type">
                 <div
-                  className={forActive === 1 && "choose__name-active"}
+                  className={forActive === 1 ? "choose__name-active" : ""}
                   onClick={() => setForActive(1)}
                 >
                   <span className="active__type">For Customer</span>
                 </div>
                 <div
-                  className={forActive === 2 && "choose__name-active"}
+                  className={forActive === 2 ? "choose__name-active" : ""}
                   onClick={() => setForActive(2)}
                 >
                   <span className="active__type">For Driver</span>

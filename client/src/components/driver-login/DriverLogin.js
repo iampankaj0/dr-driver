@@ -12,7 +12,6 @@ const DriverLogin = () => {
 
       <Container>
         <Header />
-
         <div className="main__single__container center__container">
           <DriverContainer />
         </div>

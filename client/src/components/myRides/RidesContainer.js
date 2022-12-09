@@ -186,14 +186,14 @@ const RidesContainer = () => {
 
           <div className="current__history_tabs">
             <div
-              className={activeTab === 0 && "tab__active"}
+              className={activeTab === 0 ? "tab__active" : ""}
               style={{ color: activeTab === 0 ? "#fff" : "var(--text-color)" }}
               onClick={() => setActiveTab(0)}
             >
               <p>Current</p>
             </div>
             <div
-              className={activeTab === 1 && "tab__active"}
+              className={activeTab === 1 ? "tab__active" : ""}
               style={{ color: activeTab === 1 ? "#fff" : "var(--text-color)" }}
               onClick={() => setActiveTab(1)}
             >
